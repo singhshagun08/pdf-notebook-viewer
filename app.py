@@ -5,6 +5,7 @@ from pdf2image import convert_from_path
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+app.config["MAX_CONTENT_LENGTH"] = 20 * 1024 * 1024
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
